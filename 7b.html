@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="showWindow()">Click</button>
+
+<script>
+
+function showWindow()
+{
+let name = prompt("Enter your name");
+
+let result = confirm("Do you want to continue?");
+
+if(result == true)
+{
+alert("Welcome " + name);
+}
+else
+{
+alert("Operation Cancelled");
+}
+
+document.write("Window Width: " + window.innerWidth + "<br>");
+document.write("Window Height: " + window.innerHeight);
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Image Example</title>
+    <style>
+        body {
+            height: 18px; /* to allow scrolling */
+
+            background-image: url('california.jpg');
+            background-repeat: no-repeat;
+
+            /* halfway down the page */
+            background-position: center 50%;
+
+            /* keep image fixed while scrolling */
+            background-attachment: fixed;
+
+            /* tilt horizontally */
+            transform: skewX(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Background Image Demo</h1>
+    <p>Scroll the page to see the fixed background image.</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+function Student(name, age)
+{
+this.name = name;
+this.age = age;
+
+this.getName = function()
+{
+return this.name;
+}
+
+this.getAge = function()
+{
+return this.age;
+}
+
+this.display = function()
+{
+return "Name: " + this.name + " Age: " + this.age;
+}
+}
+
+let s1 = new Student("Prathap",19);
+
+document.write(s1.getName() + "<br>");
+
+document.write(s1.getAge() + "<br>");
+
+document.write(s1.display());
+
+</script>
+
+</body>
+</html>

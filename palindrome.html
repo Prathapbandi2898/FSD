@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Number Operations</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px gray;
+}
+
+button{
+    padding:10px;
+    margin:5px;
+    cursor:pointer;
+}
+
+#result{
+    margin-top:15px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Choose an Operation</h2>
+
+<input type="number" id="num" placeholder="Enter a number"><br><br>
+
+<button id="fact">Factorial</button>
+<button id="fib">Fibonacci</button>
+<button id="prime">Prime</button>
+<button id="pal">Palindrome</button>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+document.getElementById("fact").addEventListener("click", factorial);
+document.getElementById("fib").addEventListener("click", fibonacci);
+document.getElementById("prime").addEventListener("click", prime);
+document.getElementById("pal").addEventListener("click", palindrome);
+
+function factorial(){
+    let n = document.getElementById("num").value;
+    let fact = 1;
+
+    for(let i=1;i<=n;i++){
+        fact = fact * i;
+    }
+
+    document.getElementById("result").innerHTML = "Factorial = " + fact;
+}
+
+function fibonacci(){
+    let n = document.getElementById("num").value;
+    let a=0, b=1;
+    let series="0 1 ";
+
+    for(let i=2;i<n;i++){
+        let c = a + b;
+        series += c + " ";
+        a = b;
+        b = c;
+    }
+
+    document.getElementById("result").innerHTML = "Fibonacci: " + series;
+}
+
+function prime(){
+    let n = document.getElementById("num").value;
+    let result="";
+
+    for(let i=2;i<=n;i++){
+        let isPrime=true;
+
+        for(let j=2;j<i;j++){
+            if(i%j==0){
+                isPrime=false;
+                break;
+            }
+        }
+
+        if(isPrime){
+            result += i + " ";
+        }
+    }
+
+    document.getElementById("result").innerHTML = "Prime numbers: " + result;
+}
+
+function palindrome(){
+    let n = document.getElementById("num").value;
+    let rev = n.split("").reverse().join("");
+
+    if(n == rev)
+        document.getElementById("result").innerHTML = "It is a Palindrome";
+    else
+        document.getElementById("result").innerHTML = "Not a Palindrome";
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+let text = "I like JavaScript";
+
+let pattern = /JavaScript/;
+
+document.write("Test: " + pattern.test(text) + "<br>");
+
+document.write("Exec: " + pattern.exec(text) + "<br>");
+
+document.write("Match: " + text.match(pattern) + "<br>");
+
+document.write("Search: " + text.search(pattern) + "<br>");
+
+document.write("Replace: " + text.replace(pattern,"JS"));
+
+</script>
+
+</body>
+</html>

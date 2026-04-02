@@ -1,0 +1,41 @@
+8d<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        person = { name: 'Prathap', age: 19, city: 'Guruzala' }
+        document.write("for-in -loop:<br>")
+        document.write('-------------------<br>')
+        for (let x in person) {
+            document.write(`${person[x]}<br>`);
+        }
+        document.write(`<br><br>`)
+
+
+        document.write("for-of -loop:<br>")
+        document.write('-------------------<br>')
+        for (let y of Object.values(person)) {
+            document.write(`${y} <br>`);
+        }
+        document.write(`<br><br>`)
+
+        document.write("for-each-method:<br>")
+        document.write('-------------------<br>')
+        Object.values(person).forEach(z => {
+            document.write(`${z}<br>`)
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

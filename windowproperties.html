@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Object</title>
+    <script>
+        function showWindowInfo() {
+            document.getElementById("size").innerHTML =
+                "Window Size: " + window.innerWidth + " x " + window.innerHeight;
+            alert("This is an alert box");
+            let name = prompt("Enter your name:");          
+            document.getElementById("name").innerHTML = "Hello " + name;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Window Object Demo</h3>
+
+    <button onclick="showWindowInfo()">Click Me</button>
+
+    <p id="size"></p>
+    <p id="name"></p>
+
+</body>
+</html>
